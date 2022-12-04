@@ -1,4 +1,4 @@
-#react crud application
+# react crud application
 
 bulit with react redux and redux-saga
 i used json server for the backend
@@ -20,4 +20,3 @@ Go to ./src and Run
 
 # json-server --watch db.js --port 3004
 
-> > > > > > > 6a4c4be45344a8d53561c2582bfc45bf82f2f7d0

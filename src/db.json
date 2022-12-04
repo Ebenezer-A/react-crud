@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "first_name": "lilita",
+      "last_name": "semeneh",
+      "email": "lilitasmeneh@gmail.com",
+      "gender": "F",
+      "age": "13",
+      "id": 5
+    },
+    {
+      "first_name": "hana",
+      "last_name": "amare",
+      "email": "hanaamare@gmail.com",
+      "gender": "F",
+      "age": "28",
+      "id": 6
+    },
+    {
+      "first_name": "bereket",
+      "last_name": "tadele",
+      "email": "berekt@gmail.com",
+      "gender": "M",
+      "age": "88",
+      "id": 7
+    },
+    {
+      "first_name": "Snowden ",
+      "last_name": "abc",
+      "email": "Abenezeramre@outlook.com",
+      "gender": "M",
+      "age": "22",
+      "id": 8
+    },
+    {
+      "first_name": "Kidus",
+      "last_name": "Yohannes",
+      "email": "kidusyohannes@gmail.com",
+      "gender": "F",
+      "age": "23",
+      "id": 9
+    }
+  ]
+}

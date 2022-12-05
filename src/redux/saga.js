@@ -15,8 +15,6 @@ function* fetchUsers() {
       .then((response) => {
         return response.data;
       });
-
-    console.log("get user saga", users);
     yield put({ type: LIST_USERS, users });
   } catch (error) {
     console.log(error);
@@ -26,7 +24,6 @@ function* fetchUsers() {
 function* deleteUser(data) {
   try {
     yield axios.delete(`http://localhost:3004/users/${data.id}`);
-    console.log("delete user saga");
     yield put({ type: GET_USERS });
   } catch (error) {
     console.log(error);
@@ -35,9 +32,7 @@ function* deleteUser(data) {
 
 function* createUser(data) {
   try {
-    yield axios
-      .post("http://localhost:3004/users", data.user)
-      .then(() => console.log("User added"));
+    yield axios.post("http://localhost:3004/users", data.user);
     yield put({ type: GET_USERS });
   } catch (error) {
     console.log(error);
@@ -47,7 +42,6 @@ function* createUser(data) {
 function* updateUser(data) {
   try {
     yield axios.put(`http://localhost:3004/users/${data.state.id}`, data.state);
-    console.log("user udate saga", data.state);
     yield put({ type: GET_USERS });
   } catch (error) {
     console.log(error);

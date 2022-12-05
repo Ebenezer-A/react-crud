@@ -1,7 +1,6 @@
 import { ADD_USER, DELETE_USER, GET_USERS, UPDATE_USER } from "./actionTypes";
 
 export const getUsers = () => {
-  console.log("get user action");
   return { type: GET_USERS };
 };
 
@@ -20,7 +19,6 @@ export const addUser = (user) => {
 };
 
 export const updateUser = (state) => {
-  console.log("update action", state.id);
   return {
     type: UPDATE_USER,
     state,

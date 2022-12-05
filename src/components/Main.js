@@ -13,8 +13,6 @@ const Main = () => {
   let users = useSelector((state) => state.userReducer);
   let navigate = useNavigate();
 
-  console.log("main component", users);
-
   useEffect(() => {
     dispatch(getUsers());
   }, []);

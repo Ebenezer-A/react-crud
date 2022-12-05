@@ -22,7 +22,6 @@ const Edit = () => {
   });
 
   const { first_name, last_name, email, gender, age } = existingUser[0];
-  console.log("edit component", first_name);
   const [state, setState] = useState({
     first_name,
     last_name,

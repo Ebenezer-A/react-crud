@@ -7,7 +7,7 @@ import { Button } from "../styles/Button";
 import { Container } from "../styles/Container";
 import { Global } from "../styles/Global";
 import { Header } from "../styles/Header";
-import { StyledForm, StyledInput } from "../styles/StyledForm";
+import { StyledForm, StyledInput, StyledSelect } from "../styles/StyledForm";
 
 const AddUser = () => {
   const dispatch = useDispatch();
@@ -39,9 +39,13 @@ const AddUser = () => {
     }
   };
 
-  const handelChange = (e) => {
-    let { name, value } = e.target;
+  const handleChange = (event) => {
+    let { name, value } = event.target;
     setState({ ...state, [name]: value });
+  };
+
+  const handleGender = (event) => {
+    setState({ ...state, gender: event.target.value });
   };
 
   return (
@@ -61,7 +65,7 @@ const AddUser = () => {
             name="first_name"
             placeholder="First Name"
             value={first_name}
-            onChange={handelChange}
+            onChange={handleChange}
           />
 
           <StyledInput
@@ -69,7 +73,7 @@ const AddUser = () => {
             name="last_name"
             placeholder="Last Name"
             value={last_name}
-            onChange={handelChange}
+            onChange={handleChange}
           />
 
           <StyledInput
@@ -77,25 +81,23 @@ const AddUser = () => {
             name="email"
             placeholder="Email"
             value={email}
-            onChange={handelChange}
+            onChange={handleChange}
           />
 
           <StyledInput
             type="number"
             name="age"
-            max={99}
+            max={150}
             value={age || ""}
             placeholder="age"
-            onChange={handelChange}
+            onChange={handleChange}
           />
 
-          <StyledInput
-            type="text"
-            name="gender"
-            value={gender || ""}
-            placeholder="gender"
-            onChange={handelChange}
-          />
+          <StyledSelect value={gender} onChange={handleGender}>
+            <option>choose a gender</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </StyledSelect>
 
           <Button type="submit" bg="#DC7633">
             <FiUserPlus />

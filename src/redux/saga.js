@@ -22,11 +22,13 @@ function* fetchUsers() {
 }
 
 function* deleteUser(data) {
-  try {
-    yield axios.delete(`http://localhost:3004/users/${data.id}`);
-    yield put({ type: GET_USERS });
-  } catch (error) {
-    console.log(error);
+  if (window.confirm("Are you sure you want to delete?")) {
+    try {
+      yield axios.delete(`http://localhost:3004/users/${data.id}`);
+      yield put({ type: GET_USERS });
+    } catch (error) {
+      console.log(error);
+    }
   }
 }
 

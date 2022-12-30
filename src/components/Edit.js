@@ -7,7 +7,7 @@ import { Button } from "../styles/Button";
 import { Container } from "../styles/Container";
 import { Global } from "../styles/Global";
 import { Header } from "../styles/Header";
-import { StyledForm, StyledInput } from "../styles/StyledForm";
+import { StyledForm, StyledInput, StyledSelect } from "../styles/StyledForm";
 
 const Edit = () => {
   const dispatch = useDispatch();
@@ -37,9 +37,13 @@ const Edit = () => {
     navigate("/");
   };
 
-  const handelChange = (e) => {
-    let { name, value } = e.target;
+  const handelChange = (event) => {
+    let { name, value } = event.target;
     setState({ ...state, [name]: value });
+  };
+
+  const handleGender = (event) => {
+    setState({ ...state, gender: event.target.value });
   };
 
   return (
@@ -82,13 +86,10 @@ const Edit = () => {
             value={state.age}
             onChange={handelChange}
           />
-          <StyledInput
-            type="text"
-            name="gender"
-            placeholder="gender"
-            value={state.gender}
-            onChange={handelChange}
-          />
+          <StyledSelect value={state.gender} onChange={handleGender}>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+          </StyledSelect>
           <Button
             bg="#73C6B6"
             type="submit"

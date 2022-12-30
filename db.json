@@ -33,12 +33,12 @@
       "age": 25
     },
     {
-      "id": 7,
       "first_name": "Levey",
       "last_name": "Gundry",
       "email": "lgundry6@army.mil",
       "gender": "M",
-      "age": 47
+      "age": "50",
+      "id": 7
     },
     {
       "first_name": "dink",
@@ -47,6 +47,22 @@
       "gender": "F",
       "age": "40",
       "id": 9
+    },
+    {
+      "first_name": "Snowden ",
+      "last_name": "amare",
+      "email": "Abenezeramre@outlook.com",
+      "gender": "M",
+      "age": "21",
+      "id": 10
+    },
+    {
+      "first_name": "abenezer",
+      "last_name": "Abenezer",
+      "email": "Abenezeramre@outlook.com",
+      "gender": "M",
+      "age": "22",
+      "id": 11
     }
   ]
 }

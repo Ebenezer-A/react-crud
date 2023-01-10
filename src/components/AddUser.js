@@ -94,7 +94,7 @@ const AddUser = () => {
           />
 
           <StyledSelect value={gender} onChange={handleGender}>
-            <option>choose a gender</option>
+            <option>choose your gender</option>
             <option value="M">Male</option>
             <option value="F">Female</option>
           </StyledSelect>
@@ -103,7 +103,6 @@ const AddUser = () => {
             <FiUserPlus />
             <div>Add User</div>
           </Button>
-          {/* <input type="submit" value="Submit" /> */}
         </StyledForm>
       </Container>
     </Global>

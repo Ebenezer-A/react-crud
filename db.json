@@ -1,12 +1,12 @@
 {
   "users": [
     {
-      "id": 2,
       "first_name": "Grange",
       "last_name": "Guillond",
       "email": "gguillond1@csmonitor.com",
       "gender": "M",
-      "age": 57
+      "age": 57,
+      "id": 2
     },
     {
       "id": 3,
@@ -47,22 +47,6 @@
       "gender": "F",
       "age": "40",
       "id": 9
-    },
-    {
-      "first_name": "Snowden ",
-      "last_name": "amare",
-      "email": "Abenezeramre@outlook.com",
-      "gender": "M",
-      "age": "21",
-      "id": 10
-    },
-    {
-      "first_name": "abenezer",
-      "last_name": "Abenezer",
-      "email": "Abenezeramre@outlook.com",
-      "gender": "M",
-      "age": "22",
-      "id": 11
     }
   ]
 }
